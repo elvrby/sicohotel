@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import Image from 'next/image';
 import DisplayAddon from './addons/display';
 
 interface NavbarComponentProps {
@@ -11,8 +10,8 @@ interface NavbarComponentProps {
 
 const NavbarComponent: React.FC<NavbarComponentProps> = ({ isOpen, onClose }) => {
     const [isNavbarOpenDisplay, setIsNavbarOpen] = useState(false);
-    const [isNavbarOpenAbout, setIsNavbarOpenAbout] = useState(false);
-    const [isNavbarOpenTerms, setIsNavbarOpenTerms] = useState(false);
+    const [, setIsNavbarOpenAbout] = useState(false);
+    const [, setIsNavbarOpenTerms] = useState(false);
 
   const handleToggleNavbar = () => {
     setIsNavbarOpen(!isNavbarOpenDisplay);
@@ -26,19 +25,13 @@ const NavbarComponent: React.FC<NavbarComponentProps> = ({ isOpen, onClose }) =>
     setIsNavbarOpenAbout(!isNavbarOpenDisplay);
   };
 
-  const handleCloseNavbarAbout = () => {
-    setIsNavbarOpenAbout(false);
-  };
 
   const handleToggleNavbarTerms = () => {
     setIsNavbarOpenTerms(!isNavbarOpenDisplay);
   };
 
-  const handleCloseNavbarTerms = () => {
-    setIsNavbarOpenTerms(false);
-  };
 
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
       // Cek cookie saat komponen dimuat untuk menetapkan tema

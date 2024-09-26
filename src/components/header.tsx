@@ -16,7 +16,7 @@ const HeaderComponent: React.FC = () =>{
       setIsNavbarOpen(false);
     };
   
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    const [, setTheme] = useState<'light' | 'dark'>('light');
   
     useEffect(() => {
       const storedTheme = Cookies.get('theme');

@@ -1,4 +1,3 @@
-import next from "next";
 import Link from "next/link";
 
 const FooterMobile: React.FC = () => {
