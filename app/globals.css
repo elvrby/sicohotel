@@ -3,14 +3,94 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background-color: black;
 }
+
+body.dark-theme .bgr{
+  background-color: #F3F3F3; /* Dark mode background */
+  color: black; /* Dark mode text color */
+  overflow-y: auto; /* Atau scroll */
+  height: 100%;
+}
+body.dark-theme main{
+  background-color: #000000; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color */
+  transition: background-color 0.3s ease;
+}
+body.dark-theme .navbar{
+  background-color: #030303; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color */
+}
+body.dark-theme input{
+  background: #4A4A4A;
+  border: #4A4A4A;
+}
+body.dark-theme .line{
+  border: #4A4A4A;
+  border-top: solid 1px #4A4A4A;
+}
+body.dark-theme .ofill{
+  fill: white;
+}
+body.dark-theme .bdown{
+  border: 2px solid #4A4A4A;
+}
+body.dark-theme .bdown:hover{
+  border: 2px solid #4A4A4A;
+  background: #4A4A4A;
+}
+
+/* Light theme */
+body.light-theme .bgr{
+  background-color: black; /* Light mode background */
+  color: white; /* Light mode text color */;
+  overflow-y: auto; /* Atau scroll */
+    height: 100%;
+}
+
+body.light-theme main{
+  background-color: #F3F3F3; /* Light mode background */
+  color: #000000; /* Light mode text color */
+  transition: background-color 0.3s ease;
+}
+body.light-theme .navbar{
+  background-color: #F3F3F3; /* Light mode background */
+  color: #000000; /* Light mode text color */
+}
+
+body.light-theme .ofill{
+  fill: black;
+}
+body.light-theme input{
+  background: #f3f3f3;
+}
+body.light-theme .line{
+  border-top: solid 1px #dadada;
+}
+body.light-theme .bdown{
+  border: 2px solid #4A4A4A;
+}
+body.light-theme .bdown:hover{
+  border: 2px solid #4A4A4A;
+  background: #4A4A4A;
+  color: white;
+}
+
 
 @layer utilities {
   .text-balance {

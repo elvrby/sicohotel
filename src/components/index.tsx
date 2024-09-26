@@ -1,16 +1,16 @@
 import Image from "next/image";
 const IndexComponent: React.FC = () => {
     return(
-        <main className="w-full flex items-center justify-center">
-            <div className="flex items-center justify-between w-full pl-40 pr-40">
-                <div className="w-full flex mt-12">
+        <main className="w-full h-screen flex items-start justify-center">
+            <div className="flex items-center justify-between w-full lg:pl-40 lg:pr-40 pl-5 pr-5">
+                <div className="w-full flex flex-col-reverse lg:flex-row mt-12">
                     <div className="w-full flex flex-col items-start">
-                        <h1 className="w-96 text-4xl font-bold">Enjoy Your Vacation In Our Resort</h1>
+                        <h1 className="w-96 text-4xl font-bold mt-5">Enjoy Your Vacation In Our Resort</h1>
                         <p className="w-96 text-sm mt-4">Accompanying us, you have a trip of experiences,
                         with Cheisfis, booking accommodation,
                         resort villas, hotels</p>
                         <button className="w-36 mt-6 bg-[#6E57FF] text-white text-sm p-2 rounded-full">Start Search</button>
-                        <div className="w-full flex items-center text-xs mt-36">
+                        <div className="w-full flex items-center text-xs mt-12 lg:mt-36">
                             <div className="flex items-center mr-4">
                                 <div className="bg-black rounded-full w-1.5 h-1.5 mr-1"></div>
                                 <span>Stays</span>
