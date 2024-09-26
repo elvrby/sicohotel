@@ -85,7 +85,7 @@ const HeaderComponent: React.FC = () =>{
 
 
             {/* Mobile */}
-            <div className="w-full md:hidden">
+            <div className="fixed w-full md:hidden shadow-md z-20">
                 <div className="w-full flex items-center justify-between pl-6 pr-6 p-3 2xl:pl-80 2xl:pr-80">
                     <div className="flex-1 text-center font-semibold text-lg">
                     <h1>Hotel</h1>

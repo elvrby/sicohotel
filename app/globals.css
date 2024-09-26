@@ -18,6 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+}
+
+body.dark-theme{
   background-color: black;
 }
 
@@ -56,6 +59,9 @@ body.dark-theme .bdown:hover{
 }
 
 /* Light theme */
+body.light-theme{
+  background-color: #F3F3F3;
+}
 body.light-theme .bgr{
   background-color: black; /* Light mode background */
   color: white; /* Light mode text color */;
