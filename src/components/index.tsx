@@ -1,39 +1,77 @@
 import Image from "next/image";
-const IndexComponent: React.FC = () => {
-    return(
-        <main className="w-full h-full flex items justify-center z-0">
-            <div className="flex items-center justify-between w-full lg:pl-40 lg:pr-40 pl-1 pr-1 md:pl-5 z-0">
-                <div className="w-full flex flex-col-reverse lg:flex-row mt-12">
-                    <div className="w-full flex flex-col items-start pl-4 pr-4">
-                        <h1 className="w-72 text-4xl font-bold mt-5">Enjoy Your Vacation In Our Resort</h1>
-                        <p className="w-96 text-sm mt-4">Accompanying us, you have a trip of experiences,
-                        with Cheisfis, booking accommodation,
-                        resort villas, hotels</p>
-                        <button className="w-36 mt-6 bg-[#6E57FF] text-white text-sm p-2 rounded-full">Start Search</button>
-                        <div className="w-full flex items-center text-xs mt-12 lg:mt-36">
-                            <div className="flex items-center mr-4">
-                                <div className="bg-black rounded-full w-1.5 h-1.5 mr-1"></div>
-                                <span>Stays</span>
-                            </div>
-                            <span className="mr-4">Experience</span>
-                            <span className="mr-4">Cars</span>
-                            <span className="mr-4">Flights</span>
-                        </div>
-                    </div>
 
-                    <div className="flex w-full space-x-4 z-0">
-                        <div className="flex flex-col space-y-4">
-                            <Image className="rounded-lg" src={"/res.jpg"} alt="res.jpg" width={300} height={300}></Image>
-                            <Image className="rounded-lg" src={"/res2.jpg"} alt="res2.jpg" width={300} height={300}></Image>
-                        </div>
-                        <div>
-                            <Image className="rounded-lg h-full object-cover mx-auto" src={"/res3.jpeg"} alt="res3.jpg" width={250} height={1000}></Image>
-                        </div>
-                    </div>
-                    
+const IndexComponent: React.FC = () => {
+  return (
+    <main className="w-full min-h-screen flex justify-center">
+      <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-40">
+        <div className="w-full flex flex-col-reverse lg:flex-row mt-8 lg:mt-12 gap-8">
+          {/* Text Content */}
+          <div className="w-full lg:w-1/2 flex flex-col items-start px-4 sm:px-0">
+            <h1 className="w-full text-3xl sm:text-4xl font-bold mt-4 sm:mt-5 leading-tight">
+              Enjoy Your Vacation In Our Resort
+            </h1>
+            <p className="w-full max-w-md text-sm sm:text-base mt-3 sm:mt-4 text-gray-600">
+              Accompanying us, you have a trip of experiences, with Cheisfis,
+              booking accommodation, resort villas, hotels
+            </p>
+            <button className="mt-6 w-full sm:w-36 bg-[#6E57FF] text-white text-sm sm:text-base py-2 px-4 rounded-full hover:bg-[#5845CC] transition-colors">
+              Start Search
+            </button>
+            
+            {/* Navigation */}
+            <div className="w-full flex flex-wrap items-center gap-4 text-xs sm:text-sm mt-8 lg:mt-24">
+              {['Stays', 'Experience', 'Cars', 'Flights'].map((item, index) => (
+                <div 
+                  key={item}
+                  className="flex items-center cursor-pointer hover:text-[#6E57FF] transition-colors"
+                >
+                  {index === 0 && (
+                    <div className="bg-black rounded-full w-1.5 h-1.5 mr-1" />
+                  )}
+                  <span>{item}</span>
                 </div>
+              ))}
             </div>
-        </main>
-    )
-}
+          </div>
+
+          {/* Image Gallery */}
+          <div className="w-full lg:w-1/2 flex gap-4 overflow-hidden">
+            <div className="flex flex-col gap-4 w-1/2">
+              <div className="relative aspect-square">
+                <Image
+                  src="/res.jpg"
+                  alt="Resort 1"
+                  fill
+                  className="rounded-lg object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <div className="relative aspect-square">
+                <Image
+                  src="/res2.jpg"
+                  alt="Resort 2"
+                  fill
+                  className="rounded-lg object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            </div>
+            
+            <div className="w-1/2 relative">
+              <Image
+                src="/res3.jpeg"
+                alt="Resort 3"
+                fill
+                className="rounded-lg object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+};
+
 export default IndexComponent;
