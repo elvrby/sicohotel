@@ -85,10 +85,10 @@ const HeaderComponent: React.FC = () =>{
 
 
             {/* Mobile */}
-            <div className="fixed w-full md:hidden shadow-md z-20">
+            <div className="fixed w-full lg:hidden shadow-sm z-20">
                 <div className="w-full flex items-center justify-between pl-6 pr-6 p-3 2xl:pl-80 2xl:pr-80">
                     <div className="flex-1 text-center font-semibold text-lg">
-                    <h1>Hotel</h1>
+                    <h1>Sico Hotel</h1>
                     </div>
                     <button className="flex items-center justify-end" onClick={handleToggleNavbar}>
                     <svg width={25}viewBox="0 0 13 8"fill="none"xmlns="http://www.w3.org/2000/svg"className="ofill">
@@ -100,6 +100,7 @@ const HeaderComponent: React.FC = () =>{
                 </div>
                 <NavbarComponent isOpen={isNavbarOpen} onClose={handleCloseNavbar} />
             </div>
+
         </header>
     )
 }

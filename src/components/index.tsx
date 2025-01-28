@@ -2,10 +2,10 @@ import Image from "next/image";
 const IndexComponent: React.FC = () => {
     return(
         <main className="w-full h-full flex items justify-center z-0">
-            <div className="flex items-center justify-between w-full lg:pl-40 lg:pr-40 pl-5 pr-5 z-0">
+            <div className="flex items-center justify-between w-full lg:pl-40 lg:pr-40 pl-1 pr-1 md:pl-5 z-0">
                 <div className="w-full flex flex-col-reverse lg:flex-row mt-12">
-                    <div className="w-full flex flex-col items-start">
-                        <h1 className="w-96 text-4xl font-bold mt-5">Enjoy Your Vacation In Our Resort</h1>
+                    <div className="w-full flex flex-col items-start pl-4 pr-4">
+                        <h1 className="w-72 text-4xl font-bold mt-5">Enjoy Your Vacation In Our Resort</h1>
                         <p className="w-96 text-sm mt-4">Accompanying us, you have a trip of experiences,
                         with Cheisfis, booking accommodation,
                         resort villas, hotels</p>
