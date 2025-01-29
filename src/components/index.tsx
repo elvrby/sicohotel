@@ -1,9 +1,11 @@
 import Image from "next/image";
+import SearchBar from "@/src/components/addons/searchbar";
 
 const IndexComponent: React.FC = () => {
+  
   return (
     <main className="w-full min-h-screen flex justify-center">
-      <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-40">
+      <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-32">
         <div className="w-full flex flex-col-reverse lg:flex-row mt-8 lg:mt-12 gap-8">
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col items-start px-4 sm:px-0">
@@ -69,6 +71,17 @@ const IndexComponent: React.FC = () => {
             </div>
           </div>
         </div>
+        
+        <div>
+              <SearchBar></SearchBar>
+        </div>
+
+        <div className="mt-10">
+          <h1 className="text-2xl font-bold">Suggestion For Discovery</h1>
+          <span className="text-sm">Popular place we are recommend for you</span>
+        </div>
+
+         
       </div>
     </main>
   );

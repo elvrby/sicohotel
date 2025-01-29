@@ -31,10 +31,28 @@ const HeaderComponent: React.FC = () =>{
       }
     }, []);
 
+    // Scroll Effect
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
     return(
-        <header className="w-full h-16 flex items-center justify-center shadow-md z-50">
+        <header className="w-full h-14 flex items-center justify-center shadow-md z-50">
             {/* Desktop */}
-            <div className="lg:flex hidden items-center justify-between w-full pl-40 pr-40">
+            <div className={`fixed top-0 w-full lg:flex hidden h-16 items-center justify-between pl-40 pr-40 z-20 transition-colors duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
                 <div className="flex items-center text-sm font-medium">
                     <div className="flex h-full items-center">
                         <Image className="mr-4" src={"/AkiZone.png"} alt="" width={50} height={50}></Image>
@@ -85,12 +103,12 @@ const HeaderComponent: React.FC = () =>{
 
 
             {/* Mobile */}
-            <div className="fixed bg-white w-full lg:hidden shadow-sm z-20">
-                <div className="w-full flex items-center justify-between pl-6 pr-6 p-3 2xl:pl-80 2xl:pr-80">
-                    <div className="flex-1 text-center font-semibold text-lg">
+            <div className="fixed bg-white w-full h-14 lg:hidden shadow-sm z-20">
+                <div className="w-full flex items-center justify-between pl-4 pr-4 p-3 2xl:pl-80 2xl:pr-80">
+                    <div className="w-full flex-1 text-center items-center justify-center flex font-semibold text-lg">
                         <h1>Sico Hotel</h1>
                     </div>
-                    <button className="flex items-center justify-end" onClick={handleToggleNavbar}>
+                    <button className="w-7 flex items-center justify-end" onClick={handleToggleNavbar}>
                     <svg width={25}viewBox="0 0 13 8"fill="none"xmlns="http://www.w3.org/2000/svg"className="ofill">
                         <path d="M12.5149 0.936037H0.485074C0.356425 0.936037 0.233044 0.886728 0.142075 0.798958C0.0511059 0.711187 0 0.592145 0 0.468019C0 0.343892 0.0511059 0.22485 0.142075 0.137079C0.233044 0.0493086 0.356425 0 0.485074 0H12.5149C12.6436 0 12.767 0.0493086 12.8579 0.137079C12.9489 0.22485 13 0.343892 13 0.468019C13 0.592145 12.9489 0.711187 12.8579 0.798958C12.767 0.886728 12.6436 0.936037 12.5149 0.936037Z"/>
                         <path d="M12.5149 4.46802H0.485075C0.356425 4.46802 0.233044 4.41871 0.142075 4.33094C0.051106 4.24317 6.46176e-08 4.12413 6.46176e-08 4C6.46176e-08 3.87587 0.051106 3.75683 0.142075 3.66906C0.233044 3.58129 0.356425 3.53198 0.485075 3.53198H12.5149C12.6436 3.53198 12.767 3.58129 12.8579 3.66906C12.9489 3.75683 13 3.87587 13 4C13 4.12413 12.9489 4.24317 12.8579 4.33094C12.767 4.41871 12.6436 4.46802 12.5149 4.46802Z"/>

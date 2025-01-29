@@ -2,7 +2,8 @@ import Link from "next/link";
 
 const FooterMobile: React.FC = () => {
     return (
-        <footer className="fixed bottom-0 left-0 w-full bg-white pl-1 pb-2 pr-1 pt-3 flex justify-around items-center md:hidden text-[9px] text-black shadow-sm">
+        <main className="w-full h-16 flex items-center justify-center">
+        <footer className="fixed bottom-0 left-0 w-full bg-white pl-1 pb-2 pr-1 pt-3 flex justify-around items-center md:hidden text-[9px] text-black shadow-sm z-20">
             <div className="flex w-full justify-between">
                 <div className="text-center flex flex-col items-center flex-1">
                     <svg className="w-6 h-6" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,6 +47,7 @@ const FooterMobile: React.FC = () => {
 
             </div>
         </footer>
+        </main>
     );
 }
 
