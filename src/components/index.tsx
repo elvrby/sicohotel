@@ -77,8 +77,40 @@ const IndexComponent: React.FC = () => {
         </div>
 
         <div className="mt-10">
-          <h1 className="text-2xl font-bold">Suggestion For Discovery</h1>
-          <span className="text-sm">Popular place we are recommend for you</span>
+          <div>
+            <h1 className="text-2xl font-bold">Suggestion For Discovery</h1>
+            <span className="text-sm">Popular place we are recommend for you</span>
+          </div>
+          <div className="w-full p-2 grid grid-cols-2 gap-4 md:grid-cols-5">
+  {[
+    { src: "/jakarta-1.png", alt: "jakarta", name: "Jakarta" },
+    { src: "/bandung-1.png", alt: "bandung", name: "Bandung" },
+    { src: "/borobudur-1.png", alt: "yogyakarta", name: "Yogyakarta" },
+    { src: "/bali-1.png", alt: "bali", name: "Bali" },
+    { src: "/lombok-1.png", alt: "lombok", name: "Lombok" },
+  ].map((destination, index) => (
+    <div
+      key={index}
+      className="p-2 hover:shadow-lg hover:rounded-lg flex flex-col justify-center"
+    >
+      {/* Untuk menjaga gambar tetap di tengah */}
+      <Image
+        src={destination.src}
+        alt={destination.alt}
+        width={200}
+        height={200}
+        className="mx-auto"
+      />
+      {/* Teks di bawah gambar rata kiri */}
+      <h1 className="text-xl font-semibold mt-2 text-left">
+        {destination.name}
+      </h1>
+      <span className="text-sm text-left">80+ Hotels Available</span>
+    </div>
+  ))}
+</div>
+
+
         </div>
 
          
