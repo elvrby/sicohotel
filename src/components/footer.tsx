@@ -33,7 +33,7 @@ const FooterMobile: React.FC = () => {
                     <svg className="w-6 h-6" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.5672 24.3835L10.2707 24.0655H9.83583H1V1H27.9898L27.7583 23.8488L19.1242 24.1941L18.7287 24.2099L18.4512 24.4921L14.4564 28.5543L10.5672 24.3835ZM20.271 15.882H21.271V14.882V11.884V10.884H20.271H8.5985H7.5985V11.884V14.882V15.882H8.5985H20.271Z" stroke="black" stroke-width="1" />
                     </svg>
-                    <h1 className="mt-1">Inbox</h1>
+                    <h1 className="mt-1">Booking</h1>
                 </div>
 
                 <Link href="/login" passHref className="text-center flex flex-col items-center flex-1">
