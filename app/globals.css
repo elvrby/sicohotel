@@ -97,6 +97,9 @@ body.light-theme .navbar{
 body.light-theme .ofill{
   fill: black;
 }
+body.light-theme .ostroke{
+  stroke: black;
+}
 body.light-theme input{
   background: #f3f3f3;
 }
