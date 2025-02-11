@@ -30,6 +30,14 @@ body.dark-theme .bgr{
   overflow-y: auto; /* Atau scroll */
   height: 100%;
 }
+body.dark-theme .searchbar{
+  background-color: rgb(33, 33, 33); /* Light mode background */
+  color: white;
+}
+body.dark-theme .searchbarbtn{
+  background-color: rgb(69, 69, 69); /* Light mode background */
+  color: white;
+}
 body.dark-theme .btnclm{
   background-color: rgb(72, 72, 72);
   color: white; 
@@ -76,6 +84,10 @@ body.light-theme .bgr{
   color: black; /* Dark mode text color */
   overflow-y: auto; /* Atau scroll */
     height: 100%;
+}
+body.light-theme .searchbar{
+  background-color: #F3F3F3; /* Dark mode background */
+  color: black; /* Dark mode text color */
 }
 body.light-theme .btnclm{
   background-color: #F3F3F3; 

@@ -41,7 +41,7 @@ const SearchBar: React.FC = () =>{
         <main className="mt-4">
             {/* Search Bar */}
             <div className="relative lg:absolute lg:top-2/3 w-full max-w-2xl px-4 z-10 lg:max-w-5xl">
-            <div className="bgr rounded-lg lg:rounded-full md:rounded-full shadow-xl p-4 flex flex-col sm:flex-row gap-3">
+            <div className="searchbar rounded-lg lg:rounded-full md:rounded-full shadow-xl p-4 flex flex-col sm:flex-row gap-3">
             {/* Dropdown Destination */}
             <div className="flex-1">
                 <select
@@ -95,7 +95,7 @@ const SearchBar: React.FC = () =>{
                 className="w-full px-4 py-3 rounded-full border-none bg-gray-100 focus:ring-2 focus:ring-[#6E57FF] cursor-pointer"
                 />
                 {isGuestPopupOpen && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl p-4 space-y-4 z-20">
+                <div className="absolute top-full left-0 right-0 mt-2 searchbar rounded-lg shadow-xl p-4 space-y-4 z-20">
                     <div className="flex items-center justify-between">
                     <div>
                         <h4 className="font-semibold">Adults</h4>
@@ -104,14 +104,14 @@ const SearchBar: React.FC = () =>{
                     <div className="flex items-center gap-3">
                         <button
                         onClick={() => setAdults(Math.max(0, adults - 1))}
-                        className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        className="w-8 h-8 rounded-full searchbarbtn hover:bg-gray-200 transition-colors"
                         >
                         -
                         </button>
                         <span>{adults}</span>
                         <button
                         onClick={() => setAdults(adults + 1)}
-                        className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        className="w-8 h-8 rounded-full searchbarbtn hover:bg-gray-200 transition-colors"
                         >
                         +
                         </button>
@@ -125,14 +125,14 @@ const SearchBar: React.FC = () =>{
                     <div className="flex items-center gap-3">
                         <button
                         onClick={() => setChildren(Math.max(0, children - 1))}
-                        className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        className="w-8 h-8 rounded-full searchbarbtn hover:bg-gray-200 transition-colors"
                         >
                         -
                         </button>
                         <span>{children}</span>
                         <button
                         onClick={() => setChildren(children + 1)}
-                        className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        className="w-8 h-8 rounded-full searchbarbtn hover:bg-gray-200 transition-colors"
                         >
                         +
                         </button>
