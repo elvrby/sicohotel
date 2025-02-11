@@ -41,13 +41,13 @@ const SearchBar: React.FC = () =>{
         <main className="mt-4">
             {/* Search Bar */}
             <div className="relative lg:absolute lg:top-2/3 w-full max-w-2xl px-4 z-10 lg:max-w-5xl">
-            <div className="bg-white rounded-lg lg:rounded-full md:rounded-full shadow-xl p-4 flex flex-col sm:flex-row gap-3">
+            <div className="bgr rounded-lg lg:rounded-full md:rounded-full shadow-xl p-4 flex flex-col sm:flex-row gap-3">
             {/* Dropdown Destination */}
             <div className="flex-1">
                 <select
                 value={destination}
                 onChange={(e) => setDestination(e.target.value)}
-                className="w-full px-4 py-3 rounded-full border-none bg-gray-100 focus:ring-2 focus:ring-[#6E57FF]"
+                className="w-full px-4 py-3 rounded-full border-none btnclm focus:ring-2 focus:ring-[#6E57FF]"
                 >
                 <option value="" disabled>
                     Select Destination

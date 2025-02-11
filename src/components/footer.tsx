@@ -3,7 +3,7 @@ import Link from "next/link";
 const FooterMobile: React.FC = () => {
     return (
         <main className="w-full h-16 flex items-center justify-center">
-        <footer className="fixed bottom-0 left-0 w-full bg-white pl-1 pb-2 pr-1 pt-3 flex justify-around items-center md:hidden text-[9px] text-black shadow-sm z-20">
+        <footer className="fixed bottom-0 left-0 w-full navbar pl-1 pb-2 pr-1 pt-3 flex justify-around items-center md:hidden text-[9px] text-black shadow-sm z-20">
             <div className="flex w-full justify-between">
                 <div className="text-center flex flex-col items-center flex-1">
                     <svg className="w-6 h-6" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,9 +13,9 @@ const FooterMobile: React.FC = () => {
                 </div>
 
                 <div className="text-center flex flex-col items-center flex-1">
-                    <svg className="w-6 h-6" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 27C21.1797 27 27 21.1797 27 14C27 6.8203 21.1797 1 14 1C6.8203 1 1 6.8203 1 14C1 21.1797 6.8203 27 14 27Z" stroke="black" stroke-miterlimit="10" />
-                        <path d="M10.4328 12.6361L9.16772 20.8826L17.0097 16.2281L18.4265 7.88L10.4328 12.6355V12.6361ZM15.1984 15.1868L11.7787 17.2166L12.3303 13.6208L15.8161 11.5471L15.1984 15.1873V15.1868Z" fill="black" />
+                    <svg className="w-6 h-6 ostroke" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 27C21.1797 27 27 21.1797 27 14C27 6.8203 21.1797 1 14 1C6.8203 1 1 6.8203 1 14C1 21.1797 6.8203 27 14 27Z" />
+                        <path d="M10.4328 12.6361L9.16772 20.8826L17.0097 16.2281L18.4265 7.88L10.4328 12.6355V12.6361ZM15.1984 15.1868L11.7787 17.2166L12.3303 13.6208L15.8161 11.5471L15.1984 15.1873V15.1868Z" />
                     </svg>
                     <h1 className="mt-1">Discover</h1>
                 </div>
@@ -30,16 +30,16 @@ const FooterMobile: React.FC = () => {
                 </div>
 
                 <div className="text-center flex flex-col items-center flex-1">
-                    <svg className="w-6 h-6" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.5672 24.3835L10.2707 24.0655H9.83583H1V1H27.9898L27.7583 23.8488L19.1242 24.1941L18.7287 24.2099L18.4512 24.4921L14.4564 28.5543L10.5672 24.3835ZM20.271 15.882H21.271V14.882V11.884V10.884H20.271H8.5985H7.5985V11.884V14.882V15.882H8.5985H20.271Z" stroke="black" stroke-width="1" />
+                    <svg className="w-6 h-6 ostroke" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5672 24.3835L10.2707 24.0655H9.83583H1V1H27.9898L27.7583 23.8488L19.1242 24.1941L18.7287 24.2099L18.4512 24.4921L14.4564 28.5543L10.5672 24.3835ZM20.271 15.882H21.271V14.882V11.884V10.884H20.271H8.5985H7.5985V11.884V14.882V15.882H8.5985H20.271Z" />
                     </svg>
                     <h1 className="mt-1">Booking</h1>
                 </div>
 
                 <Link href="/login" passHref className="text-center flex flex-col items-center flex-1">
                     <div className="text-center flex flex-col items-center flex-1">
-                        <svg className="w-6 h-6" viewBox="0 0 23 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 31C1 31 1.70315 20.1955 11.485 20.1955C21.2668 20.1955 22.3535 31 22.3535 31M19.1432 7.85658C19.1432 11.6434 16.0734 14.7132 12.2866 14.7132C8.49986 14.7132 5.43006 11.6434 5.43006 7.85658C5.43006 4.06979 8.49986 1 12.2866 1C16.0734 1 19.1432 4.06979 19.1432 7.85658Z" stroke="black" stroke-miterlimit="10" />
+                        <svg className="w-6 h-6 ostroke" viewBox="0 0 23 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 31C1 31 1.70315 20.1955 11.485 20.1955C21.2668 20.1955 22.3535 31 22.3535 31M19.1432 7.85658C19.1432 11.6434 16.0734 14.7132 12.2866 14.7132C8.49986 14.7132 5.43006 11.6434 5.43006 7.85658C5.43006 4.06979 8.49986 1 12.2866 1C16.0734 1 19.1432 4.06979 19.1432 7.85658Z"/>
                         </svg>
                         <h1 className="mt-1">Profile</h1>
                     </div>

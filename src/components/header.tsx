@@ -50,9 +50,9 @@ const HeaderComponent: React.FC = () =>{
   }, []);
 
     return(
-        <header className="w-full h-14 flex items-center justify-center shadow-md z-50">
+        <div className="w-full navbar h-14 flex items-center justify-center shadow-md z-50">
             {/* Desktop */}
-            <div className={`fixed top-0 w-full lg:flex hidden h-16 items-center justify-between pl-40 pr-40 z-20 transition-colors duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
+            <div className={`fixed top-0 w-full lg:flex hidden h-16 items-center justify-between pl-40 pr-40 z-20 transition-colors duration-300 ${isScrolled ? "navbar shadow-md" : "bg-transparent"}`}>
                 <div className="flex items-center text-sm font-medium">
                     <div className="flex h-full items-center">
                         <Image className="mr-4" src={"/AkiZone.png"} alt="" width={50} height={50}></Image>
@@ -103,7 +103,7 @@ const HeaderComponent: React.FC = () =>{
 
 
             {/* Mobile */}
-            <div className="fixed bg-white w-full h-14 lg:hidden shadow-sm z-20">
+            <div className="fixed navbar w-full h-14 lg:hidden shadow-sm z-20">
                 <div className="w-full flex items-center justify-between pl-4 pr-4 p-3 2xl:pl-80 2xl:pr-80">
                     <div className="w-full flex-1 text-center items-center justify-center flex font-semibold text-lg">
                         <h1>Sico Hotel</h1>
@@ -119,7 +119,7 @@ const HeaderComponent: React.FC = () =>{
                 <NavbarComponent isOpen={isNavbarOpen} onClose={handleCloseNavbar} />
             </div>
 
-        </header>
+        </div>
     )
 }
 export default HeaderComponent;

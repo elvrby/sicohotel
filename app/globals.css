@@ -25,10 +25,16 @@ body.dark-theme{
 }
 
 body.dark-theme .bgr{
-  background-color: #F3F3F3; /* Dark mode background */
-  color: black; /* Dark mode text color */
+  background-color: rgb(33, 33, 33); /* Light mode background */
+  color: white; /* Light mode text color */;
   overflow-y: auto; /* Atau scroll */
   height: 100%;
+}
+body.dark-theme .btnclm{
+  background-color: rgb(72, 72, 72);
+  color: white; 
+  overflow-y: auto; 
+    height: 100%;
 }
 body.dark-theme main{
   background-color: #000000; /* Dark mode background */
@@ -50,6 +56,9 @@ body.dark-theme .line{
 body.dark-theme .ofill{
   fill: white;
 }
+body.dark-theme .ostroke{
+  stroke: white;
+}
 body.dark-theme .bdown{
   border: 2px solid #4A4A4A;
 }
@@ -63,9 +72,15 @@ body.light-theme{
   background-color: #F3F3F3;
 }
 body.light-theme .bgr{
-  background-color: black; /* Light mode background */
-  color: white; /* Light mode text color */;
+  background-color: #F3F3F3; /* Dark mode background */
+  color: black; /* Dark mode text color */
   overflow-y: auto; /* Atau scroll */
+    height: 100%;
+}
+body.light-theme .btnclm{
+  background-color: #F3F3F3; 
+  color: black; 
+  overflow-y: auto; 
     height: 100%;
 }
 

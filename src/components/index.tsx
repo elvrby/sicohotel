@@ -178,7 +178,7 @@ const IndexComponent: React.FC = () => {
                 </svg>
 
                 <div className="ml-4">
-                  <h2 className="text-3xl font-bold text-black flex items-center">Our Facilities</h2>
+                  <h1 className="text-3xl font-bold flex items-center">Our Facilities</h1>
                   <p className="text-gray-500">80+ Hotels Available</p>
                 </div>
                 
