@@ -74,6 +74,9 @@ body.dark-theme .bdown:hover{
   border: 2px solid #4A4A4A;
   background: #4A4A4A;
 }
+body.dark-theme .bannerboxfacility{
+  background-color: #232323;
+}
 
 /* Light theme */
 body.light-theme{
@@ -125,6 +128,9 @@ body.light-theme .bdown:hover{
   border: 2px solid #4A4A4A;
   background: #4A4A4A;
   color: white;
+}
+body.light-theme .bannerboxfacility{
+  background-color: #cdd9ec;
 }
 
 

@@ -185,7 +185,7 @@ const IndexComponent: React.FC = () => {
               </div>
               
               <div className="flex flex-col md:flex-row items-center md:mt-6 p-6 rounded-xl">
-                <div className="hidden md:flex w-96 item right-64 rounded-3xl h-3/5 absolute bg-blue-100">
+                <div className="hidden md:flex w-96 item right-64 rounded-3xl h-3/5 absolute bannerboxfacility">
                   
                 </div>
                 {/* Main Video */}
