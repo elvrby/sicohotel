@@ -1,9 +1,11 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next';
 
-export default async function sitemap (): Promise<MetadataRoute.Sitemap> {
-  return[
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  return [
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/`
-    }
-  ]
+      url: baseUrl,
+      lastModified: new Date().toISOString(),
+    },
+  ];
 }
